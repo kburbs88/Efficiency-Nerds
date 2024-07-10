@@ -38,6 +38,17 @@
     <article class="container" id="full-profile">
       <div class="row">
         <aside class="col-sm-4 text-center">
+          <!-- <div class="card" style="width: 18rem">
+            <img src="..." class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">username</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">pronouns</li>
+              <li class="list-group-item">age range</li>
+              <li class="list-group-item">Sun sign</li>
+            </ul>
+          </div> -->
           <picture>Profile Picture Goes Here</picture>
             <ul style="list-style-type: none">
                 <li><h3>username</h3></li>
@@ -63,25 +74,16 @@
     </article>
     <article class="container" id="all-tools">
       <div class="row">
-
-
-        <section class="col-sm-8">
-          <form id="todo-form" method="POST">
-            <label for="todo-text">Add a Todo</label>
-            <input type="text" placeholder="I need to..." name="todo-text" id="todo-text" />
-          </form>
-          <ul id="todo-list"></ul>
+        <section class="col-sm-8" id="todo-list">
           The To-Do List Creator Function Goes here
         </section>
-
-
         <section class="col-sm-4">Our Task Generator Goes here</section>
         <section class="col text-center">
           The pomodoro will be centered here
         </section>
       </div>
     </article>
-    <script src="assets/JS/to-do.js"></script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
