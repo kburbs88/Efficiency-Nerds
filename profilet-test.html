@@ -11,6 +11,7 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
     crossorigin="anonymous"
   />
+  <link rel="stylesheet" type="text/css" href="assets/CSS/style.CSS" />
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Welcome You!</a>
@@ -21,8 +22,7 @@
         data-bs-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup"
         aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+        aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -34,10 +34,11 @@
       </div>
     </div>
   </nav>
+
   <body>
-    <article class="container" id="full-profile">
+    <article class="container-fluid" id="full-profile">
       <div class="row">
-        <aside class="col-sm-4 text-center">
+        <aside class="col-sm-4 text-center" id="profile-overview">
           <picture>Profile Picture Goes Here</picture>
             <ul style="list-style-type: none">
                 <li><h3>username</h3></li>
@@ -54,31 +55,31 @@
         </section>
       </div>
     </article>
-    <article class="container-fluid">
+
+    <article class="container-fluid" id="fun-fact">
       <h3>Nerdy Fun Fact</h3>
       <p>Fun fact goes here</p>
     </article>
-    <article class="container-fluid text-center">
+    <article class="container-fluid text-center" id="tools-bar">
       <h3>Effeciency Nerd Tools Title Bar</h3>
     </article>
-    <article class="container" id="all-tools">
+    <article class="container-fluid" id="all-tools">
       <div class="row">
-
-
         <section class="col-sm-8">
           <form id="todo-form" method="POST">
             <label for="todo-text">Add a Todo</label>
             <input type="text" placeholder="I need to..." name="todo-text" id="todo-text" />
           </form>
           <ul id="todo-list"></ul>
-          The To-Do List Creator Function Goes here
         </section>
-
 
         <section class="col-sm-4">Our Task Generator Goes here</section>
-        <section class="col text-center">
-          The pomodoro will be centered here
+
+        <section class="col text-center pomodoro"> pomodor goes here
+          <!-- <h3 class="time" style="text-align:center;">pomodor goes here</h3>
+          <div id="main"></div> -->
         </section>
+
       </div>
     </article>
     <script src="assets/JS/to-do.js"></script>
@@ -88,5 +89,7 @@
       crossorigin="anonymous"
     ></script>
   </body>
-  <footer></footer>
+  <footer>
+    This is footer
+  </footer>
 </html>

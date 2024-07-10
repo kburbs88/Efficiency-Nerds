@@ -61,3 +61,10 @@ todoList.addEventListener("click", function (event) {
 });
 
 // init();
+
+// const timerElement = document.getElementsByClassName("time");
+// const mainElement = document.getElementById("main");
+
+// let minutesLeft = function setTime() {
+//   const timeInterval = setInterval();
+// };
