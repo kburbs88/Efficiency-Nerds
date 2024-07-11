@@ -1,8 +1,3 @@
-// Create a function that stores user input to local storage and redirects user to personal page.
-// function= "SignUp()" {
-
-// addEventListener
-
 const firstName = document.getElementById('firstName').value;
 const lastName = document.getElementById('lastName').value;
 const username = document.getElementById('username').value;
@@ -46,9 +41,5 @@ function SignIn() {
 // Adds the new user to the array of users.
 // Saves the updated user data back to local storage.
 // Redirects to the second HTML page after the account is created.
-
-// if user does not correctly enter inputs, they will recieve an error message directing them to correctly enter sign up info
-// Create a function for collecting user About me information and then appending it to the page
-// Create a light/dark mode toggle based on user preference
 
  
