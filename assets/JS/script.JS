@@ -43,7 +43,7 @@ users.push(user);
 
 localStorage.setItem('users', JSON.stringify(users));
 
-window.location.href = 'profile.html';
+window.location.href = 'profile-test.html';
 
 function SignIn() {
     
@@ -51,7 +51,16 @@ function SignIn() {
     const password = document.getElementById('signInPassword').value;
 
     alert(`Username: ${username}\nPassword: ${password}`);
+
+    window.location.href = 'profile-test.html';
+
   }
+
+document.getElementById("themeToggleBtn").addEventListener("click", function() {
+
+document.body.classList.toggle("dark-mode");
+
+});
 
 
 // Collects the form data when the "Create Account" button is clicked.
