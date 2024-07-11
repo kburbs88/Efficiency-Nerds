@@ -1,3 +1,22 @@
+
+const themeSwitcher = document.querySelector('#toggle');
+const body = document.querySelector('#body');
+
+let mode = 'light';
+
+themeSwitcher.addEventListener('click', function () {
+  if (mode === 'dark') {
+    mode = 'light';
+    body.setAttribute('class', 'light');
+    document.documentElement.style.setProperty('background', '#fff')
+  }
+  else {
+    mode = 'dark';
+    body.setAttribute('class', 'dark');
+document.documentElement.style.setProperty('background', '#000');    
+  }
+});
+
 const firstName = document.getElementById('firstName').value;
 const lastName = document.getElementById('lastName').value;
 const username = document.getElementById('username').value;
@@ -42,4 +61,4 @@ function SignIn() {
 // Saves the updated user data back to local storage.
 // Redirects to the second HTML page after the account is created.
 
- 
+
