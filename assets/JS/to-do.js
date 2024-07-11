@@ -60,6 +60,12 @@ todoList.addEventListener("click", function (event) {
   }
 });
 
+const getRandomToDO = function (todos)) {
+  let i = Math.floor(Math.random() * todos.length)+1;
+  let randomToDo = todos[i-1];
+  window.alert("Your Task is: "+randomtodo);
+  };
+
 // init();
 
 // const timerElement = document.getElementsByClassName("time");
