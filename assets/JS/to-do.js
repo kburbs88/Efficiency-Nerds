@@ -7,6 +7,9 @@ const todos = [];
 function renderTodos() {
   todoList.innerHTML = "";
   const storeTodos = JSON.parse(localStorage.getItem("todos"));
+  if (storeTodos === null) {
+    return;
+  }
   for (let i = 0; i < storeTodos.length; i++) {
     const todo = storeTodos[i];
 
