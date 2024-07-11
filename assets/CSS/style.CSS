@@ -1,0 +1,41 @@
+/* Profile Designs */
+/* *,
+*::before,
+*::after {
+  box-sizing: content-box;
+} */
+
+article {
+  border-top: solid;
+  border-color: #8563af;
+}
+
+#full-profile {
+  background-color: #ffedda;
+}
+
+#fun-fact {
+  background-color: #b7eee7;
+}
+
+#fun-fact p {
+  margin-bottom: 0rem;
+}
+
+#tools-bar {
+  background-color: aquamarine;
+}
+
+#tools-bar h3 {
+  margin-bottom: 0rem;
+}
+
+#all-tools {
+  background-color: #ffedda;
+}
+
+footer {
+  border-top: solid;
+  border-color: #8563af;
+  background-color: #e6b6c9;
+}
