@@ -8,6 +8,7 @@
 article {
   border-top: solid;
   border-color: #8563af;
+  /* margin-top: something px */
 }
 
 #full-profile {
