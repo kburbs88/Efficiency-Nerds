@@ -11,6 +11,16 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
     crossorigin="anonymous"
   />
+  <div><h1><button id="lighttoggle">🦄</h1>
+    <h1><button id="darktoggle">🦖</h1>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+        <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+      </div>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
   <link rel="stylesheet" type="text/css" href="assets/CSS/style.CSS" />
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
@@ -35,9 +45,8 @@
     </div>
   </nav>
 
-  <body>
-    <article class="container-fluid" id="full-profile">
-      <div class="row">
+  <body class="container-fluid" style="min-height: 100vh;">
+    <article class="row" id="full-profile">
         <aside class="col-sm-4 text-center" id="profile-overview">
           <picture>Profile Picture Goes Here</picture>
             <ul style="list-style-type: none">
@@ -53,18 +62,16 @@
             me
           </p>
         </section>
-      </div>
     </article>
-
-    <article class="container-fluid" id="fun-fact">
+    <article class="row" id="fun-fact">
+      <!-- if it looks funcing wrap 58 and 59 in a div class= "col" -->
       <h3>Nerdy Fun Fact</h3>
       <p>Fun fact goes here</p>
     </article>
-    <article class="container-fluid text-center" id="tools-bar">
+    <article class="row text-center" id="tools-bar">
       <h3>Effeciency Nerd Tools Title Bar</h3>
     </article>
-    <article class="container-fluid" id="all-tools">
-      <div class="row">
+    <article class="row" id="all-tools">
         <section class="col-sm-8">
           <form id="todo-form" method="POST">
             <label for="todo-text">Add a Todo</label>
@@ -75,12 +82,12 @@
 
         <section class="col-sm-4">Our Task Generator Goes here</section>
 
-        <section class="col text-center pomodoro"> pomodor goes here
-          <!-- <h3 class="time" style="text-align:center;">pomodor goes here</h3>
-          <div id="main"></div> -->
+        <section class="col text-center"> 
+          <h4> Pomodoro Technique</h4>
+          <div id="timer">20:00 mins</div>
+          <button onclick="startTimer()">Start Timer</button>
+          <Button onclick="stopTimer()">Stop Timer</Button>
         </section>
-
-      </div>
     </article>
     <script src="assets/JS/to-do.js"></script>
     <script

@@ -1,6 +1,8 @@
 const todoForm = document.querySelector("#todo-form");
 const todoInput = document.querySelector("#todo-text");
 const todoList = document.getElementById("todo-list");
+// const getRandomTask = function (tasksArray);
+
 
 const todos = [];
 
@@ -63,11 +65,33 @@ todoList.addEventListener("click", function (event) {
   }
 });
 
+//Generate a Random Task
+const getRandomTodo = function (todos) {
+  let i = Math.floor(Math.random() * todos.length)+1;
+  let randomToDo = todos[i-1];
+  window.alert ("Your task is: "+randomToDo);
+  };
+
 // init();
 
-// const timerElement = document.getElementsByClassName("time");
-// const mainElement = document.getElementById("main");
+let timeLeft = 1200;
+let timerId;
 
-// let minutesLeft = function setTime() {
-//   const timeInterval = setInterval();
-// };
+function startTimer() {
+  timerId = setInterval(() => {
+    if (timeLeft <= 0) {
+      clearInterval(timerId);
+      alert("Timer is up!");
+    } else {
+      const minutes = Math.floor(timeLeft / 60);
+      let seconds = timeLeft % 60;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+      document.getElementById("timer").innerText = `${minutes}:${seconds}`;
+      timeLeft--;
+    }
+  }, 1000);
+}
+
+function stopTimer() {
+  clearInterval(timerId);
+}
