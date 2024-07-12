@@ -11,7 +11,6 @@ const body = document.querySelector("body");
 let mode = 'light';
 
 themeSwitcher.addEventListener('click', function (event) {
-  event.preventDefault();
   console.log(event);
   if (mode === 'dark') {
     mode = 'light';
@@ -22,7 +21,6 @@ themeSwitcher.addEventListener('click', function (event) {
     body.setAttribute('class', 'container-fluid dark');
   }
   
-
 });
 
 const todos = [];
@@ -153,9 +151,9 @@ function loadFromLocalStorage() {
     
       body.appendChild(currentElement);
 
-      // ? Save to the temp storage variable based on the type of element
+  
       if (currentElement.tagName === 'img'
-        
+
       ) {
         // ? Push the image object to the tempStorageObject images property/array
         tempStorageObject.images.push({
