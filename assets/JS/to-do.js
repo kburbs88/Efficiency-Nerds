@@ -1,6 +1,8 @@
 const todoForm = document.querySelector("#todo-form");
 const todoInput = document.querySelector("#todo-text");
 const todoList = document.getElementById("todo-list");
+const addImageBtn = document.querySelector("#add-image"); 
+const imageUrlInput = document.querySelector('#image-url'); 
 // const getRandomTask = function (tasksArray);
 
 const themeSwitcher = document.querySelector("#toggle");
@@ -9,24 +11,16 @@ const body = document.querySelector("body");
 let mode = 'light';
 
 themeSwitcher.addEventListener('click', function (event) {
-  event.preventDefault();
   console.log(event);
   if (mode === 'dark') {
     mode = 'light';
     body.setAttribute('class', 'container-fluid light');
-    // document.documentElement.style.setProperty('background', '#fff')
-    // themeSwitcher.checked = false
   }
   else {
     mode = 'dark';
     body.setAttribute('class', 'container-fluid dark');
-// document.documentElement.style.setProperty('background', '#000');    
-// themeSwitcher.checked = true
   }
   
-// document.getElementById("themeToggleBtn").addEventListener("click", function() {
-// document.body.classList.toggle("dark-mode");
-
 });
 
 const todos = [];
@@ -125,3 +119,56 @@ function startTimer() {
 function stopTimer() {
   clearInterval(timerId);
 }
+let tempStorageObject = {
+  images: [],
+};
+function updateLocalStorage() {
+  localStorage.setItem('profileImg', JSON.stringify(tempStorageObject));
+}
+
+function loadFromLocalStorage() {
+  const storedData = JSON.parse(localStorage.getItem('profileImg'));
+  if (storedData) {
+    tempStorageObject = storedData;
+  }}
+
+    tempStorageObject.images.forEach((image) => {
+      const img = document.createElement('img');
+      img.src = image.url;
+      img.style.left = image.left;
+      img.style.top = image.top;
+      document.body.appendChild(img);
+    });
+    addImageBtn.addEventListener('click', function () {
+      const imageUrl = imageUrlInput.value;
+      if (imageUrl) {
+        const img = document.createElement('img');
+        img.src = imageUrl;
+        document.body.appendChild(img);
+      }
+    });
+    currentElement = img;
+    
+      body.appendChild(currentElement);
+
+  
+      if (currentElement.tagName === 'img'
+
+      ) {
+        // ? Push the image object to the tempStorageObject images property/array
+        tempStorageObject.images.push({
+          url: currentElement.src,
+          left: left,
+          top: top,
+        });
+      } else {
+        // ? Push the text object to the tempStorageObject text property/array
+        tempStorageObject.text.push({
+          text: currentElement.textContent,
+          left: left,
+          top: top,
+        });
+      }
+  
+      // Update local storage with the new tempStorageObject information
+      updateLocalStorage();
