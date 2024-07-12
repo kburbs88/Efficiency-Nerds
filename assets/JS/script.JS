@@ -1,5 +1,6 @@
 
 
+function SignUp() {
 const firstName = document.getElementById('firstName').value;
 const lastName = document.getElementById('lastName').value;
 const username = document.getElementById('username').value;
@@ -8,7 +9,10 @@ const ageRange = document.getElementById('ageRange').value;
 const sunSign = document.getElementById('sunSign').value;
 const pronouns = document.getElementById('pronouns').value;
 
-
+if (!firstName || !lastName || !username || !email || !password || !ageRange || !sunSign || !pronouns) {
+        alert("Please fill out all required fields.");
+        return;
+    }
 
 const user = {
     firstName,
@@ -26,16 +30,32 @@ users.push(user);
 
 localStorage.setItem('users', JSON.stringify(users));
 
-window.location.href = 'profile-test.html';
+const signupMessage = document.getElementById('signupMessage');
+signupMessage.innerHTML = "<div class='alert alert-success'>Account successfully created!</div>";
+
+    setTimeout(() => {
+    window.location.href = 'profilet-test.html';
+    }, 2000); // 2-second delay
+}
 
 function SignIn() {
     
     const username = document.getElementById('signInUsername').value;
     const password = document.getElementById('signInPassword').value;
 
+if (!username || !password) {
+        alert("Please fill out both fields.");
+        return;
+    }
+
     alert(`Username: ${username}\nPassword: ${password}`);
 
-    window.location.href = 'profile-test.html';
+  const signinMessage = document.getElementById('signinMessage');
+  signinMessage.innerHTML = "<div class='alert alert-success'>Sign-in successful!</div>";
+
+    setTimeout(() => {
+    window.location.href = 'profilet-test.html';
+    }, 2000); // 2-second delay
 
   }
 
