@@ -129,8 +129,29 @@ const funFactElement = document.getElementById("nerdy-fact");
 
 // function renderProfile() {}
 let users = JSON.parse(localStorage.getItem("users"));
-let displayUsername = users[3];
-console.log(displayUsername);
+// let displayUsername = JSON.parse(localStorage.getItem("users"));
+// [3];
+console.log(users);
+
+function renderTodos() {
+  const storeTodos = JSON.parse(localStorage.getItem("todos"));
+  if (storeTodos === null) {
+    return;
+  }
+  for (let i = 0; i < storeTodos.length; i++) {
+    const todo = storeTodos[i];
+
+    const list = document.createElement("li");
+    list.textContent = todo;
+    list.setAttribute("data-index", i);
+
+    const button = document.createElement("button");
+    button.textContent = "Done";
+
+    list.appendChild(button);
+    todoList.append(list);
+  }
+}
 
 // dropDownElements.textContent = fullProfile[(4, 5, 6)];
 // userProfile.append(dropDownElements);
