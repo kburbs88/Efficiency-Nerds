@@ -1,14 +1,43 @@
 const todoForm = document.querySelector("#todo-form");
 const todoInput = document.querySelector("#todo-text");
 const todoList = document.getElementById("todo-list");
+let button= document.getElementById("randomizer");
 // const getRandomTask = function (tasksArray);
 
+const themeSwitcher = document.querySelector("#toggle");
+const body = document.querySelector("body");
+
+let mode = 'light';
+
+themeSwitcher.addEventListener('click', function (event) {
+  event.preventDefault();
+  console.log(event);
+  if (mode === 'dark') {
+    mode = 'light';
+    body.setAttribute('class', 'container-fluid light');
+    // document.documentElement.style.setProperty('background', '#fff')
+    // themeSwitcher.checked = false
+  }
+  else {
+    mode = 'dark';
+    body.setAttribute('class', 'container-fluid dark');
+// document.documentElement.style.setProperty('background', '#000');    
+// themeSwitcher.checked = true
+  }
+  
+// document.getElementById("themeToggleBtn").addEventListener("click", function() {
+// document.body.classList.toggle("dark-mode");
+
+});
 
 const todos = [];
 
 function renderTodos() {
   todoList.innerHTML = "";
   const storeTodos = JSON.parse(localStorage.getItem("todos"));
+  if (storeTodos === null) {
+    return;
+  }
   for (let i = 0; i < storeTodos.length; i++) {
     const todo = storeTodos[i];
 
@@ -36,7 +65,6 @@ renderTodos();
 todoForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
-  console.log("hello");
   const todoText = todoInput.value.trim();
   if (todoText === "") {
     return;
@@ -66,6 +94,7 @@ todoList.addEventListener("click", function (event) {
 const getRandomTodo = function (todos) {
   let i = Math.floor(Math.random() * todos.length)+1;
   let randomToDo = todos[i-1];
+  button = 
   window.alert ("Your task is: "+randomToDo);
   };
 

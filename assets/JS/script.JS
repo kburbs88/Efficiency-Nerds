@@ -1,21 +1,4 @@
 
-const themeSwitcher = document.querySelector('#toggle');
-const body = document.querySelector('#body');
-
-let mode = 'light';
-
-themeSwitcher.addEventListener('click', function () {
-  if (mode === 'dark') {
-    mode = 'light';
-    body.setAttribute('class', 'light');
-    document.documentElement.style.setProperty('background', '#fff')
-  }
-  else {
-    mode = 'dark';
-    body.setAttribute('class', 'dark');
-document.documentElement.style.setProperty('background', '#000');    
-  }
-});
 
 function SignUp() {
 const firstName = document.getElementById('firstName').value;
@@ -83,5 +66,3 @@ if (!username || !password) {
 // Adds the new user to the array of users.
 // Saves the updated user data back to local storage.
 // Redirects to the second HTML page after the account is created.
-
-
