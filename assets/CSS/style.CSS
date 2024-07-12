@@ -40,3 +40,15 @@ footer {
   border-color: #8563af;
   background-color: #e6b6c9;
 }
+
+button {
+  background-color: #8563af;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+}
