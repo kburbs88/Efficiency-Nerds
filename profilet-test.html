@@ -86,7 +86,21 @@
           <h4> Pomodoro Technique</h4>
           <div id="timer">20:00 mins</div>
           <button onclick="startTimer()">Start Timer</button>
-          <Button onclick="stopTimer()">Stop Timer</Button>
+          <Button onclick="stopTimer()" type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">Stop Timer</Button>
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  You did it!
+                </div>
+                <div class="modal-footer">
+                  <button type="button" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
         </section>
     </article>
     <script src="assets/JS/to-do.js"></script>
