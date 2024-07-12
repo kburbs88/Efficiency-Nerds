@@ -125,11 +125,11 @@ let tempStorageObject = {
   images: [],
 };
 function updateLocalStorage() {
-  localStorage.setItem('moodBoardData', JSON.stringify(tempStorageObject));
+  localStorage.setItem('profileImg', JSON.stringify(tempStorageObject));
 }
 
 function loadFromLocalStorage() {
-  const storedData = JSON.parse(localStorage.getItem('moodBoardData'));
+  const storedData = JSON.parse(localStorage.getItem('profileImg'));
   if (storedData) {
     tempStorageObject = storedData;
   }}
@@ -149,6 +149,7 @@ function loadFromLocalStorage() {
         document.body.appendChild(img);
       }
     });
+    currentElement = img;
     
       body.appendChild(currentElement);
 
