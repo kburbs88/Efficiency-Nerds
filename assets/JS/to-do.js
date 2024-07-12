@@ -6,27 +6,24 @@ const todoList = document.getElementById("todo-list");
 const themeSwitcher = document.querySelector("#toggle");
 const body = document.querySelector("body");
 
-let mode = 'light';
+let mode = "light";
 
-themeSwitcher.addEventListener('click', function (event) {
+themeSwitcher.addEventListener("click", function (event) {
   event.preventDefault();
-  console.log(event);
-  if (mode === 'dark') {
-    mode = 'light';
-    body.setAttribute('class', 'container-fluid light');
+  if (mode === "dark") {
+    mode = "light";
+    body.setAttribute("class", "container-fluid light");
     // document.documentElement.style.setProperty('background', '#fff')
     // themeSwitcher.checked = false
+  } else {
+    mode = "dark";
+    body.setAttribute("class", "container-fluid dark");
+    // document.documentElement.style.setProperty('background', '#000');
+    // themeSwitcher.checked = true
   }
-  else {
-    mode = 'dark';
-    body.setAttribute('class', 'container-fluid dark');
-// document.documentElement.style.setProperty('background', '#000');    
-// themeSwitcher.checked = true
-  }
-  
-// document.getElementById("themeToggleBtn").addEventListener("click", function() {
-// document.body.classList.toggle("dark-mode");
 
+  // document.getElementById("themeToggleBtn").addEventListener("click", function() {
+  // document.body.classList.toggle("dark-mode");
 });
 
 const todos = [];
@@ -89,19 +86,17 @@ todoList.addEventListener("click", function (event) {
   }
 });
 
-let button= document.getElementById("randomize");
-button.addEventListener ("click", function(event) {
-  let i = Math.floor(Math.random() * todos.length)+1;
-  let randomToDo = todos[i-1];
+let button = document.getElementById("randomize");
+button.addEventListener("click", function (event) {
+  let i = Math.floor(Math.random() * todos.length) + 1;
+  let randomToDo = todos[i - 1];
   console.log(randomToDo);
 
   document.getElementById("randomTodo").textContent = randomToDo;
 
-// alert ("Your task is: "+randomToDo);
+  // alert ("Your task is: "+randomToDo);
 });
-  
-    
-  
+
 // init();
 
 let timeLeft = 1200;
@@ -125,3 +120,25 @@ function startTimer() {
 function stopTimer() {
   clearInterval(timerId);
 }
+
+const userProfile = document.getElementById("full-profile");
+const usernameElement = document.getElementById("username");
+const dropDownElements = document.createElement("ol");
+const aboutMeElement = document.getElementById("about-me");
+const funFactElement = document.getElementById("nerdy-fact");
+
+// function renderProfile() {}
+let users = JSON.parse(localStorage.getItem("users"));
+let displayUsername = users[3];
+console.log(displayUsername);
+
+// dropDownElements.textContent = fullProfile[(4, 5, 6)];
+// userProfile.append(dropDownElements);
+
+// function readLocalStorage() {
+//   let fullProfile = localStorage.getItem("users");
+//   if (fullProfile) {
+//     return JSON(fullProfile);
+//   } else fullProfile = [];
+//   console.log("data from local storage", fullProfile);
+// }

@@ -50,7 +50,7 @@
       <picture>Profile Picture Goes Here</picture>
       <ul style="list-style-type: none">
         <li>
-          <h3>username</h3>
+          <h3 id="username">username</h3>
         </li>
         <li>Pronouns</li>
         <li>Age Range</li>
@@ -58,16 +58,16 @@
     </aside>
     <section class="col-sm-8">
       <h3>About me</h3>
-      <p>
+      <p id="about-me">
         This column will have the about me and sticker sheet after the about
         me
       </p>
     </section>
-  </article>
-  <article class="row" id="fun-fact">
-    <!-- if it looks funcing wrap 58 and 59 in a div class= "col" -->
-    <h3>Nerdy Fun Fact</h3>
-    <p>Fun fact goes here</p>
+      <article class="row" id="fun-fact">
+      <!-- if it looks funcing wrap 58 and 59 in a div class= "col" -->
+      <h3>Nerdy Fun Fact</h3>
+      <p id="nerdy-fact">Fun fact goes here</p>
+    </article>
   </article>
   <article class="row text-center" id="tools-bar">
     <h3>Efficiency Nerd Tools Title Bar</h3>
@@ -85,14 +85,7 @@
     <button id="randomize">Randomize!</button>
     <p>Your task is:</p>
     <label id="randomTodo"></label>
-<!-- 
-**Dafne - This was showing up twice so I commented this out, should it be deleted?**
-    <section class="col text-center">
-      <h4> Pomodoro Technique</h4>
-      <div id="timer">20:00 mins</div>
-      <button onclick="startTimer()">Start Timer</button>
-      <Button onclick="stopTimer()">Stop Timer</Button>
-    </section> -->
+
   <article class = "timer">
         <section class="col text-center"> 
           <h4> Pomodoro Technique</h4>
