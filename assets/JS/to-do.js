@@ -1,7 +1,6 @@
 const todoForm = document.querySelector("#todo-form");
 const todoInput = document.querySelector("#todo-text");
 const todoList = document.getElementById("todo-list");
-let button= document.getElementById("randomizer");
 // const getRandomTask = function (tasksArray);
 
 const themeSwitcher = document.querySelector("#toggle");
@@ -90,14 +89,19 @@ todoList.addEventListener("click", function (event) {
   }
 });
 
-//Generate a Random Task
-const getRandomTodo = function (todos) {
+let button= document.getElementById("randomize");
+button.addEventListener ("click", function(event) {
   let i = Math.floor(Math.random() * todos.length)+1;
   let randomToDo = todos[i-1];
-  button = 
-  window.alert ("Your task is: "+randomToDo);
-  };
+  console.log(randomToDo);
 
+  document.getElementById("randomTodo").textContent = randomToDo;
+
+// alert ("Your task is: "+randomToDo);
+});
+  
+    
+  
 // init();
 
 let timeLeft = 1200;
