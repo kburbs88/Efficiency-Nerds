@@ -154,7 +154,9 @@ function loadFromLocalStorage() {
       body.appendChild(currentElement);
 
       // ? Save to the temp storage variable based on the type of element
-      if (currentElement.tagName === 'IMG') {
+      if (currentElement.tagName === 'img'
+        
+      ) {
         // ? Push the image object to the tempStorageObject images property/array
         tempStorageObject.images.push({
           url: currentElement.src,

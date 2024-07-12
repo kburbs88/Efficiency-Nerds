@@ -49,6 +49,7 @@ footer {
 .dark
 
 button {
+  padding: 12px 70px;
   background-color: #8563af;
   border: none;
   border-radius: 8px;
