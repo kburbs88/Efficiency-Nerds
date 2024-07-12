@@ -1,21 +1,4 @@
 
-const themeSwitcher = document.querySelector('#toggle');
-const body = document.querySelector('#body');
-
-let mode = 'light';
-
-themeSwitcher.addEventListener('click', function () {
-  if (mode === 'dark') {
-    mode = 'light';
-    body.setAttribute('class', 'light');
-    document.documentElement.style.setProperty('background', '#fff')
-  }
-  else {
-    mode = 'dark';
-    body.setAttribute('class', 'dark');
-document.documentElement.style.setProperty('background', '#000');    
-  }
-});
 
 const firstName = document.getElementById('firstName').value;
 const lastName = document.getElementById('lastName').value;
@@ -56,12 +39,6 @@ function SignIn() {
 
   }
 
-document.getElementById("themeToggleBtn").addEventListener("click", function() {
-
-document.body.classList.toggle("dark-mode");
-
-});
-
 
 // Collects the form data when the "Create Account" button is clicked.
 // Creates a user object containing the collected data.
@@ -69,5 +46,3 @@ document.body.classList.toggle("dark-mode");
 // Adds the new user to the array of users.
 // Saves the updated user data back to local storage.
 // Redirects to the second HTML page after the account is created.
-
-
