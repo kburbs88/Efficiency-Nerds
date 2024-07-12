@@ -1,6 +1,7 @@
 const todoForm = document.querySelector("#todo-form");
 const todoInput = document.querySelector("#todo-text");
 const todoList = document.getElementById("todo-list");
+let button= document.getElementById("randomizer");
 // const getRandomTask = function (tasksArray);
 
 const themeSwitcher = document.querySelector("#toggle");
@@ -64,7 +65,6 @@ renderTodos();
 todoForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
-  console.log("hello");
   const todoText = todoInput.value.trim();
   if (todoText === "") {
     return;
@@ -94,7 +94,7 @@ todoList.addEventListener("click", function (event) {
 const getRandomTodo = function (todos) {
   let i = Math.floor(Math.random() * todos.length)+1;
   let randomToDo = todos[i-1];
-
+  button = 
   window.alert ("Your task is: "+randomToDo);
   };
 
