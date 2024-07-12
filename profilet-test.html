@@ -11,18 +11,16 @@
 <div>
   <!-- <h1><button id="toggle">🦄</h1>
   <h1><button id="toggle">🦖</h1> -->
-    <p>Choose Your Profile Style</p>
-  <div class="form-check form-switch">
-    <label>🦄</label>
-    <input class="form-check-input" type="checkbox" role="switch" id="toggle">
-    <label class="form-check-label" for="toggle">🦖</label>
-  </div>
+   
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
     aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+  <figure>
+    <img src="assets/images/EfficiencyNerdsLogo (2).png" alt="Efficiency Nerds Logo" />
+  </figure>
 </div>
-<link rel="stylesheet" type="text/css" href="assets/CSS/style.CSS" />
+<link rel="stylesheet" type="text/css" href="assets/CSS/style.CSS"/>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Welcome You!</a>
@@ -35,6 +33,12 @@
         <a class="nav-link active" aria-current="page" href="#">Home</a>
         <a class="nav-link" href="#">Tasks Tools</a>
         <a class="nav-link" href="#">Pomodoro</a>
+        <p>Choose Your Profile Style</p>
+        <label>🦄</label>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" id="toggle">
+          <label class="form-check-label" for="toggle">🦖</label>
+        </div>
       </div>
     </div>
   </div>
@@ -79,14 +83,17 @@
 
     <section class="col-sm-4">Generate A Random Todo</section>
     <button id="randomize">Randomize!</button>
-
+    <p>Your task is:</p>
+    <label id="randomTodo"></label>
+<!-- 
+**Dafne - This was showing up twice so I commented this out, should it be deleted?**
     <section class="col text-center">
       <h4> Pomodoro Technique</h4>
       <div id="timer">20:00 mins</div>
       <button onclick="startTimer()">Start Timer</button>
       <Button onclick="stopTimer()">Stop Timer</Button>
-    </section>
-  </article>
+    </section> -->
+  <article class = "timer">
         <section class="col text-center"> 
           <h4> Pomodoro Technique</h4>
           <div id="timer">20:00 mins</div>
