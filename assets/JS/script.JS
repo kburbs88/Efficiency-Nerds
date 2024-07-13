@@ -37,35 +37,11 @@ function SignUp() {
     aboutMe,
   };
 
-  let users = JSON.parse(localStorage.getItem("users")) || [];
-
-  users.push(user);
-
-  localStorage.setItem("users", JSON.stringify(users));
+  localStorage.setItem("currentUser", JSON.stringify(user));
 
   const signupMessage = document.getElementById("signupMessage");
   signupMessage.innerHTML =
     "<div class='alert alert-success'>Account successfully created!</div>";
-
-  setTimeout(() => {
-    window.location.href = "profilet-test.html";
-  }, 2000); // 2-second delay
-}
-
-function SignIn() {
-  const username = document.getElementById("signInUsername").value;
-  const password = document.getElementById("signInPassword").value;
-
-  if (!username || !password) {
-    alert("Please fill out both fields.");
-    return;
-  }
-
-  alert(`Username: ${username}\nPassword: ${password}`);
-
-  const signinMessage = document.getElementById("signinMessage");
-  signinMessage.innerHTML =
-    "<div class='alert alert-success'>Sign-in successful!</div>";
 
   setTimeout(() => {
     window.location.href = "profilet-test.html";

@@ -51,9 +51,6 @@ function storeTodos() {
   localStorage.setItem("todos", JSON.stringify(todos));
 }
 
-// function init() {
-//   const storeTodos = JSON.parse(localStorage.getItem("todos-added"));
-// }
 renderTodos();
 
 todoForm.addEventListener("submit", function (event) {
@@ -175,5 +172,3 @@ if (currentElement.tagName === "img") {
 updateLocalStorage();
 
 // end profile image
-
-// profile render
