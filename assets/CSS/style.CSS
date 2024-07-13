@@ -18,6 +18,9 @@ article {
   /* margin-top: something px */
 }
 .light{
+  main {
+    background-color: #dd98ed;
+  }
 #full-profile {
   background-color: #ffedda;
 }
@@ -46,6 +49,9 @@ footer {
 }
 }
 .dark{
+main {
+    background-color: #8563af;
+  }
 #full-profile {
   background-color: #75ebb4;
 }
