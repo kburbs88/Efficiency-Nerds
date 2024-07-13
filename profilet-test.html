@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -42,7 +41,6 @@
 </div>
 </div>
 </nav>
-
 <body class="container-fluid" style="min-height: 100vh;">
   <article class="row" id="full-profile">
     <aside class="col-sm-4 text-center" id="profile-overview">
@@ -50,15 +48,15 @@
       <button id="add-image">Add Profile Image</button>
       <ul style="list-style-type: none">
         <li>
-          <h3>username</h3>
+          <h3 id="username">username</h3>
         </li>
-        <li>Pronouns</li>
-        <li>Age Range</li>
-        <li>Sun Sign</li>
+        <li id="pronouns">Pronouns</li>
+        <li id="age-range">Age Range</li>
+        <li id="sun-sign">Sun Sign</li>
     </aside>
     <section class="col-sm-8">
       <h3>About me</h3>
-      <p>
+      <p id="about-me">
         This column will have the about me and sticker sheet after the about
         me
       </p>
@@ -73,7 +71,7 @@
   <article class="row text-center" id="fun-fact">
     <!-- if it looks funcing wrap 58 and 59 in a div class= "col" -->
     <h3>Nerdy Fun Fact</h3>
-    <p>Fun fact goes here</p>
+    <p id="nerdy-fact">Fun fact goes here</p>
   </article>
   <article class="row text-center" id="tools-bar">
     <h3>Efficiency Nerd Tools</h3>
@@ -121,7 +119,6 @@
               </div>
             </div>
           </div>
-
       </section>
     </article>
     <script src="assets/JS/to-do.js"></script>
@@ -129,15 +126,14 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"></script>
 </body>
-
 <footer class="text-center">
   Created by Efficiency Nerds: Dafne, Molly & Usama 2024
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script src="assets/JS/to-do.js"></script>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="assets/JS/to-do.js"></script>
+  <script src="assets/JS/profile-render.js"></script>
 </body>
-
 </main>
-
 </html>

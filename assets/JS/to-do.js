@@ -1,33 +1,34 @@
 const todoForm = document.querySelector("#todo-form");
 const todoInput = document.querySelector("#todo-text");
 const todoList = document.getElementById("todo-list");
-const addImageBtn = document.querySelector("#add-image"); 
-const imageUrlInput = document.querySelector('#image-url'); 
+const addImageBtn = document.querySelector("#add-image");
+const imageUrlInput = document.querySelector("#image-url");
 // const getRandomTask = function (tasksArray);
 
 const themeSwitcher = document.querySelector("#toggle");
 const body = document.querySelector("body");
 
-let mode = 'light';
+let mode = "light";
 
-themeSwitcher.addEventListener('click', function (event) {
+themeSwitcher.addEventListener("click", function (event) {
   console.log(event);
-  if (mode === 'dark') {
-    mode = 'light';
-    body.setAttribute('class', 'container-fluid light');
+  if (mode === "dark") {
+    mode = "light";
+    body.setAttribute("class", "container-fluid light");
+  } else {
+    mode = "dark";
+    body.setAttribute("class", "container-fluid dark");
   }
-  else {
-    mode = 'dark';
-    body.setAttribute('class', 'container-fluid dark');
-  }
-  
 });
 
+// To do List
 const todos = [];
+console.log(todos);
 
 function renderTodos() {
   todoList.innerHTML = "";
   const storeTodos = JSON.parse(localStorage.getItem("todos"));
+  console.log(storeTodos);
   if (storeTodos === null) {
     return;
   }
@@ -50,9 +51,6 @@ function storeTodos() {
   localStorage.setItem("todos", JSON.stringify(todos));
 }
 
-// function init() {
-//   const storeTodos = JSON.parse(localStorage.getItem("todos-added"));
-// }
 renderTodos();
 
 todoForm.addEventListener("submit", function (event) {
@@ -82,21 +80,21 @@ todoList.addEventListener("click", function (event) {
     renderTodos();
   }
 });
+//  end todo
 
-let button= document.getElementById("randomize");
-button.addEventListener ("click", function(event) {
-  let i = Math.floor(Math.random() * todos.length)+1;
-  let randomToDo = todos[i-1];
+//randomizer
+let button = document.getElementById("randomize");
+button.addEventListener("click", function (event) {
+  let i = Math.floor(Math.random() * todos.length) + 1;
+  let randomToDo = todos[i - 1];
   console.log(randomToDo);
 
   document.getElementById("randomTodo").textContent = randomToDo;
 
-// alert ("Your task is: "+randomToDo);
+  // alert ("Your task is: "+randomToDo);
 });
-  
-    
-  
-// init();
+
+// timer
 
 let timeLeft = 1200;
 let timerId;
@@ -119,6 +117,7 @@ function startTimer() {
 function stopTimer() {
   clearInterval(timerId);
 }
+
 //**Still working on the add image function**
 
 // let tempStorageObject = {
@@ -155,3 +154,4 @@ function stopTimer() {
   
 //       // Update local storage with the new tempStorageObject information
 //       updateLocalStorage();
+
