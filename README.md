@@ -1,70 +1,69 @@
-# CTE-Project1Like with all projects, we need to start by making a repository. Navigate to GitHub and create a new repository for your project. Ensure that the option to add a README.md file is checked.
+# <Efficiency-Nerds>
 
-Once the repository has been created, clone it to your machine using git clone <repository-name> and open the entire application in VS Code.
+## Description
 
-At the root of the application, use VS Code or the command line to create a file named .gitignore. This file will store a list of files or folders that may end up in the application but that we don't want to keep on GitHub.
+Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
 
-Add the following line to the newly created .gitignore file:
+- What was your motivation?
+- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
+- What problem does it solve?
+- What did you learn?
 
-.DS_Store
-The .DS_Store file is a file unique to macOS that the operating system automatically creates to internally store a directory's attributes, so Windows users have likely not encountered this before. This file has no bearing on the actual project code, so it's best to always add it to the .gitignore file to ensure that it never makes it to the actual GitHub repository.
+## Table of Contents (Optional)
 
-Now save your code, commit it, and push it to the main branch using the following commands:
+If your README is long, add a table of contents to make it easy for users to find what they need.
 
-git add -A
-git commit -m 'add gitignore file'
-git push origin main
-Great, now the application is ready for other developers! Before we add those developers, however, let's add some protective measures to the repo on GitHub.
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
 
-Protect the main Branch
-When you work alone on a project, it's a safe assumption that any code that is pushed to the main branch will come from one source, so it's easy to keep track of who added what code and whether it works or not. When working with others, however, certain rules need to be put in place to keep every developer in sync and in agreement on what code is ready for production. Luckily, GitHub has some features we can add to a repo to stay in sync more easily. Let's go and add them now:
+## Installation
 
-Navigate to the repository on GitHub and select the Settings tab for the repo. The resulting page should look like the following image:
+What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
 
-The GitHub repository's settings page shows options to set for the repo
+## Usage
 
-Once there, look in the left column's menu and select the Branches option. Then find the "Add Branch Protection Rule" button under "Branch protection rules" in the main content on the right, and select it. See the following image for reference:
+Provide instructions and examples for use. Include screenshots as needed.
 
-The branch settings page in the repository shows a button to add a rule to a branch
+To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
 
-After you select "Add branch protection rule," a page titled "Branch protection rule" will appear. On this page, we'll set up the repository so that no code can be pushed to the main branch by any member of the developer team. All code that is to be merged into the main branch MUST be merged through a GitHub pull request. Let's add the following to this page:
+    ```md
+    ![alt text](assets/images/screenshot.png)
+    ```
 
-For the "Branch name pattern" input field, enter the branch main.
+## Credits
 
-Next, check the box next to the option for "Require a pull request before merging." It will open another option called "Require Approvals" that is enabled by default. Leave this option enabled. The dropdown menu below this option allows you to select the number of approvals before merging a pull request is allowed. We can leave this at one for now.
+Dafne Luna - https://github.com/dafnefluna
+Molly Howard - https://github.com/mollyhoward319
+Usama Badarr - https://github.com/usamabadarr
 
-Finally, select the option "Do not allow bypassing the above settings." This way, even the repository owner cannot push to main and has to follow all of the same rules as the rest of the developers.
+Bootstrap?
+FSF?
+W3 Schools - https://www.w3schools.com/
 
-Confirm that the correct rules are in place by comparing with the following image:
+## License
 
-The branch protection rule page shows all of the options in place to protect the main branch.
+The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
 
-Make sure to click the Create button at the bottom of the page. The page will refresh and inform us that the rules have been created.
+---
 
-Great! Now the repository's main branch cannot have code added to it without a pull request, and that pull request must be reviewed and approved by at least one other developer on the project. Let's go add those other developers now!
+🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
 
-Important: We can still work locally in the main branch, though it's not recommended. The limitation we just put in place is that git push origin main will not work anymore. If you have accidentally done work in the local main branch and need to push it, you should checkout a new branch for that updated code and push it to that branch on GitHub instead.
+## Badges
 
-Add Collaborators to the Repository
-GitHub allows developers to work together and contribute to a single repository in a few different ways. We will set up the repository so that certain other GitHub users can write data and read data to it. Let's go add these collaborators with the following steps:
+![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
 
-In the GitHub repository's Settings page, select "Collaborators" from the menu on the left side. You should see the following image:
+Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
 
-The GitHub repository's settings page shows who has access to read or write to the repository and the option to invite collaborators.
+## Features
 
-Click the "Add people" button. Once the modal dialog opens, start typing in the GitHub username of one of your collaborators, and the list should automatically populate that user's entry. The page should resemble the following image:
+If your project has a lot of features, list them here.
 
-The invite a collaborator modal dialog shows the user that needs to be invited to the repo.
+## How to Contribute
 
-Select the entry and click the "Add <github-username> to this repository" button. The updated Manage Access page should look like the following image:
+If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
 
-The manage access page shows there is a pending invitation for a collaborator.
+## Tests
 
-Now the user will need to accept the invitation to contribute to the repository. The owner of the repository can also select the small clipboard icon next to the Pending Invite note, copy the invite link, and send it to the collaborator directly.
-
-This will only handle one collaborator, so repeat this process for every collaborator on the project.
-
-Once all of the collaborators have accepted the invite, it's time to get coding!
-
-Hints
-Ask an instructor or TA if you get stuck or have any questions! Now that the repository is set up, check out what Git workflow can work for your group.
+Go the extra mile and write tests for your application. Then provide examples on how to run them here.
