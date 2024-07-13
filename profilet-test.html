@@ -9,45 +9,45 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
   integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
 <div>
- <main> 
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-<div class ='logo'>
-    <img src="assets/images/EF.nerds.transparent.png" height=300px, display=flex, alt="Efficiency Nerds Logo" />
-</div>
-<link rel="stylesheet" type="text/css" href="assets/CSS/style.CSS"/>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Welcome You!</a>
+  <main>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
       aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-        <a class="nav-link" href="#">Tasks Tools</a>
-        <a class="nav-link" href="#">Pomodoro</a>
-        <p>Choose Your Profile Style</p>
-        <label display:inline-block,="500px">🦄</label>
-        <div class="form-check form-switch">
-          <input class="form-check-input" type="checkbox" role="switch" id="toggle">
-          <label class="form-check-label" for="toggle">🦖</label>
+    <div class='logo'>
+      <img src="assets/images/EF.nerds.transparent.png" height=300px, display=flex, alt="Efficiency Nerds Logo" />
+    </div>
+    <link rel="stylesheet" type="text/css" href="assets/CSS/style.CSS" />
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Welcome You!</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" href="#">Tasks Tools</a>
+            <a class="nav-link" href="#">Pomodoro</a>
+            <p>Choose Your Profile Style</p>
+            <label display:inline-block,="500px">🦄</label>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="toggle">
+              <label class="form-check-label" for="toggle">🦖</label>
+            </div>
           </div>
         </div>
-        </div>
       </div>
-    </div>
-  </div>
+</div>
+</div>
 </nav>
 
 <body class="container-fluid" style="min-height: 100vh;">
   <article class="row" id="full-profile">
     <aside class="col-sm-4 text-center" id="profile-overview">
       <input type="text" id="image-url" placeholder="Enter image URL" />
-          <button id="add-image">Add Profile Image</button>
+      <button id="add-image">Add Profile Image</button>
       <ul style="list-style-type: none">
         <li>
           <h3>username</h3>
@@ -62,6 +62,12 @@
         This column will have the about me and sticker sheet after the about
         me
       </p>
+      <div class="stickersheetlight" display: none>
+        <img src="./assets/images/StickerSheet-Light.png" height=300px, alt="Light Sticker Sheet">
+        </div>
+      <div class="stickersheetdark">
+        <img src="./assets/images/StickerSheet-Dark.png" height=300px, alt="Dark Sticker Sheet" />
+      </div>
     </section>
   </article>
   <article class="row text-center" id="fun-fact">
@@ -80,58 +86,58 @@
       </form>
       <ul id="todo-list"></ul>
     </section>
-<div class = "text-center">
-    <section>Generate A Random Todo</section><br>
-    <button id="randomize">Randomize!</button><br>
-    <p>Your task is:</p>
-    <label id="randomTodo"></label>
-</div>
-<!-- 
-**Dafne - This was showing up twice so I commented this out, should it be deleted?**
-    <section class="col text-center">
-      <h4> Pomodoro Technique</h4>
-      <div id="timer">20:00 mins</div>
-      <button onclick="startTimer()">Start Timer</button>
-      <Button onclick="stopTimer()">Stop Timer</Button>
-    </section> -->
-  <article class = "timer">
-        <section class="col text-center"> 
-          <h4> Pomodoro Technique</h4>
+    <div class="text-center">
+      <section>Generate A Random Todo</section><br>
+      <button id="randomize">Randomize!</button><br>
+      <p>Your task is:</p>
+      <h1 id="randomTodo"></h1>
+      <div class="random-wheel">
+      <img src="./assets/images/RandomWheel.transparent.png" height=200px, display=flex, alt="Task Generator Wheel" />
+    </div>
+  
+    <article class="timer">
+      <section class="col text-center">
+        <h4> Pomodoro Technique</h4>
+
+        <div id="tomatotimer">
+          <img src="./assets/images/TomatoTimer.transparent.png" height=100px, alt="Tomato Timer" />
           <div id="timer">20:00 mins</div>
-          <button onclick="startTimer()">Start Timer</button>
-          <Button onclick="stopTimer()" type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">Stop Timer</Button>
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  You did it!
-                </div>
-                <div class="modal-footer">
-                  <button type="button" data-bs-dismiss="modal">Close</button>
-                </div>
+        </div>
+        <button onclick="startTimer()">Start Timer</button>
+        <Button onclick="stopTimer()" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Stop
+          Timer</Button>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Woohoo!</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-        </section>
+              <div class="modal-body">
+                You did it!
+              </div>
+              <div class="modal-footer">
+                <button type="button" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+
+      </section>
     </article>
     <script src="assets/JS/to-do.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-  </body>
-    
-  <footer class = "text-center">
+      crossorigin="anonymous"></script>
+</body>
+
+<footer class="text-center">
   Created by Efficiency Nerds: Dafne, Molly & Usama 2024
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-  <script src="assets/JS/to-do.js"></script>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="assets/JS/to-do.js"></script>
 </body>
 
 </main>
+
 </html>

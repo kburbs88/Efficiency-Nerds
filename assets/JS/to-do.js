@@ -119,56 +119,39 @@ function startTimer() {
 function stopTimer() {
   clearInterval(timerId);
 }
-let tempStorageObject = {
-  images: [],
-};
-function updateLocalStorage() {
-  localStorage.setItem('profileImg', JSON.stringify(tempStorageObject));
-}
+//**Still working on the add image function**
 
-function loadFromLocalStorage() {
-  const storedData = JSON.parse(localStorage.getItem('profileImg'));
-  if (storedData) {
-    tempStorageObject = storedData;
-  }}
+// let tempStorageObject = {
+//   images: [],
+// };
+// function updateLocalStorage() {
+//   localStorage.setItem('profileImg', JSON.stringify(tempStorageObject));
+// }
 
-    tempStorageObject.images.forEach((image) => {
-      const img = document.createElement('img');
-      img.src = image.url;
-      img.style.left = image.left;
-      img.style.top = image.top;
-      document.body.appendChild(img);
-    });
-    addImageBtn.addEventListener('click', function () {
-      const imageUrl = imageUrlInput.value;
-      if (imageUrl) {
-        const img = document.createElement('img');
-        img.src = imageUrl;
-        document.body.appendChild(img);
-      }
-    });
-    currentElement = img;
+// function loadFromLocalStorage() {
+//   const storedData = JSON.parse(localStorage.getItem('profileImg'));
+//   if (storedData) {
+//     tempStorageObject = storedData;
+//   }}
+
+//     tempStorageObject.images.forEach((image) => {
+//       const img = document.createElement('img');
+//       img.src = image.url;
+//       img.style.left = image.left;
+//       img.style.top = image.top;
+//       document.body.appendChild(img);
+//     });
+//     addImageBtn.addEventListener('click', function () {
+//       const imageUrl = imageUrlInput.value;
+//       if (imageUrl) {
+//         const img = document.createElement('img');
+//         img.src = imageUrl;
+//         document.body.appendChild(img);
+//       }
+//     });
+//     currentElement = img;
     
-      body.appendChild(currentElement);
-
+//       body.appendChild(currentElement);
   
-      if (currentElement.tagName === 'img'
-
-      ) {
-        // ? Push the image object to the tempStorageObject images property/array
-        tempStorageObject.images.push({
-          url: currentElement.src,
-          left: left,
-          top: top,
-        });
-      } else {
-        // ? Push the text object to the tempStorageObject text property/array
-        tempStorageObject.text.push({
-          text: currentElement.textContent,
-          left: left,
-          top: top,
-        });
-      }
-  
-      // Update local storage with the new tempStorageObject information
-      updateLocalStorage();
+//       // Update local storage with the new tempStorageObject information
+//       updateLocalStorage();
