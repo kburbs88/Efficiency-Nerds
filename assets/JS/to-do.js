@@ -21,11 +21,14 @@ themeSwitcher.addEventListener("click", function (event) {
   }
 });
 
+// To do List
 const todos = [];
+console.log(todos);
 
 function renderTodos() {
   todoList.innerHTML = "";
   const storeTodos = JSON.parse(localStorage.getItem("todos"));
+  console.log(storeTodos);
   if (storeTodos === null) {
     return;
   }
@@ -80,7 +83,9 @@ todoList.addEventListener("click", function (event) {
     renderTodos();
   }
 });
+//  end todo
 
+//randomizer
 let button = document.getElementById("randomize");
 button.addEventListener("click", function (event) {
   let i = Math.floor(Math.random() * todos.length) + 1;
@@ -92,7 +97,7 @@ button.addEventListener("click", function (event) {
   // alert ("Your task is: "+randomToDo);
 });
 
-// init();
+// timer
 
 let timeLeft = 1200;
 let timerId;
@@ -116,49 +121,7 @@ function stopTimer() {
   clearInterval(timerId);
 }
 
-const userProfile = document.getElementById("full-profile");
-const usernameElement = document.getElementById("username");
-const dropDownElements = document.createElement("ol");
-const aboutMeElement = document.getElementById("about-me");
-const funFactElement = document.getElementById("nerdy-fact");
-
-// function renderProfile() {}
-let users = JSON.parse(localStorage.getItem("users"));
-// let displayUsername = JSON.parse(localStorage.getItem("users"));
-// [3];
-console.log(users);
-
-function renderTodos() {
-  const storeTodos = JSON.parse(localStorage.getItem("todos"));
-  if (storeTodos === null) {
-    return;
-  }
-  for (let i = 0; i < storeTodos.length; i++) {
-    const todo = storeTodos[i];
-
-    const list = document.createElement("li");
-    list.textContent = todo;
-    list.setAttribute("data-index", i);
-
-    const button = document.createElement("button");
-    button.textContent = "Done";
-
-    list.appendChild(button);
-    todoList.append(list);
-  }
-}
-
-// dropDownElements.textContent = fullProfile[(4, 5, 6)];
-// userProfile.append(dropDownElements);
-
-// function readLocalStorage() {
-//   let fullProfile = localStorage.getItem("users");
-//   if (fullProfile) {
-//     return JSON(fullProfile);
-//   } else fullProfile = [];
-//   console.log("data from local storage", fullProfile);
-// }
-
+// profile image
 let tempStorageObject = {
   images: [],
 };
@@ -210,3 +173,7 @@ if (currentElement.tagName === "img") {
 
 // Update local storage with the new tempStorageObject information
 updateLocalStorage();
+
+// end profile image
+
+// profile render
