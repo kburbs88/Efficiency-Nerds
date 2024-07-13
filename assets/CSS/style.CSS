@@ -47,6 +47,13 @@ footer {
   border-color: #8563af;
   background-color: #e6b6c9;
 }
+.stickersheetlight{
+  display:flex;
+  justify-content: center;
+}
+.stickersheetdark {
+  display: none;
+}
 }
 .dark{
 main {
@@ -70,6 +77,9 @@ main {
 #timer {
   background-color: #fae932;
 }
+#tomatotimer {
+  background-color: #fae932;
+} 
 #all-tools {
   background-color: #75ebb4;
 }
@@ -78,9 +88,17 @@ footer {
   border-color: #8563af;
   background-color: #e6b6c9;
 }
+.stickersheetdark{
+  display:flex;
+  justify-content: center;
+}
+.stickersheetlight {
+  display: none;
+}
 }
 
 .footer {
+  show();
   display: flex;
   align-content: center;
 }
@@ -107,6 +125,19 @@ button {
 .logo {
   display:flex;
   justify-content: center;
+}
+
+.tomatoimage {
+  display:flex;
+  justify-content: center;
+}
+
+.random-wheel {
+  display:flex;
+  justify-content: end;
+  padding-right: 150px;
+  margin-top: 0%
+ margin-bottom: 0px;
 }
 
 #toggle {
