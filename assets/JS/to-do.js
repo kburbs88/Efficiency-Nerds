@@ -9,6 +9,7 @@ const themeSwitcher = document.querySelector("#toggle");
 const body = document.querySelector("body");
 
 let mode = "light";
+body.setAttribute("class", "container-fluid light");
 
 themeSwitcher.addEventListener("click", function (event) {
   console.log(event);
@@ -24,7 +25,6 @@ themeSwitcher.addEventListener("click", function (event) {
 // To do List
 const todos = [];
 console.log(todos);
-
 function renderTodos() {
   todoList.innerHTML = "";
   const storeTodos = JSON.parse(localStorage.getItem("todos"));
