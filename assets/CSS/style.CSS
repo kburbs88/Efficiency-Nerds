@@ -9,6 +9,10 @@ article {
   border-color: #8563af;
   /* margin-top: something px */
 }
+
+#about-me {
+  margin: 50px 200px 50px 100px;
+}
 .light {
   main {
     background-color: #dd98ed;

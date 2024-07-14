@@ -118,40 +118,40 @@ function stopTimer() {
   clearInterval(timerId);
 }
 
-//**Still working on the add image function**
+// // **Still working on the add image function**
 
 // let tempStorageObject = {
 //   images: [],
 // };
 // function updateLocalStorage() {
-//   localStorage.setItem('profileImg', JSON.stringify(tempStorageObject));
+//   localStorage.setItem("profileImg", JSON.stringify(tempStorageObject));
 // }
 
 // function loadFromLocalStorage() {
-//   const storedData = JSON.parse(localStorage.getItem('profileImg'));
+//   const storedData = JSON.parse(localStorage.getItem("profileImg"));
 //   if (storedData) {
 //     tempStorageObject = storedData;
-//   }}
+//   }
+// }
 
-//     tempStorageObject.images.forEach((image) => {
-//       const img = document.createElement('img');
-//       img.src = image.url;
-//       img.style.left = image.left;
-//       img.style.top = image.top;
-//       document.body.appendChild(img);
-//     });
-//     addImageBtn.addEventListener('click', function () {
-//       const imageUrl = imageUrlInput.value;
-//       if (imageUrl) {
-//         const img = document.createElement('img');
-//         img.src = imageUrl;
-//         document.body.appendChild(img);
-//       }
-//     });
-//     currentElement = img;
-    
-//       body.appendChild(currentElement);
-  
-//       // Update local storage with the new tempStorageObject information
-//       updateLocalStorage();
+// tempStorageObject.images.forEach((image) => {
+//   const img = document.createElement("img");
+//   img.src = image.url;
+//   img.style.left = image.left;
+//   img.style.top = image.top;
+//   document.body.append(img);
+// });
+// addImageBtn.addEventListener("click", function () {
+//   const imageUrl = imageUrlInput.value;
+//   if (imageUrl) {
+//     const img = document.createElement("img");
+//     img.src = imageUrl;
+//     document.body.appendC(img);
+//   }
+// });
+// currentElement = img;
 
+// body.append(currentElement);
+
+// // Update local storage with the new tempStorageObject information
+// updateLocalStorage();
