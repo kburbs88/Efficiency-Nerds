@@ -118,6 +118,17 @@ function stopTimer() {
   clearInterval(timerId);
 }
 
+// Set the display property of the element to none using CSS
+document.getElementById("stickersheet").style.display = "hidden";
+
+// Remove the display property after the page loads using the DOMContentLoaded event
+// document.addEventListener("DOMContentLoaded", function () {
+//   document.getElementById("stickersheet").style.display = "block";
+// });
+
+// function hideSheets() {
+//   onload;
+// }
 // // **Still working on the add image function**
 
 // let tempStorageObject = {

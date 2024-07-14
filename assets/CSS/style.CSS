@@ -11,8 +11,9 @@ article {
 }
 
 #about-me {
-  margin: 50px 200px 50px 100px;
+  margin: 50px 200px 50px 0px;
 }
+
 .light {
   main {
     background-color: #dd98ed;
@@ -43,13 +44,15 @@ article {
     border-color: #8563af;
     background-color: #e6b6c9;
   }
-  /* .stickersheetlight{
-  display:flex;
-  justify-content: center;
-} */
-  /* .stickersheetdark {
-  display: none;
-} */
+  .stickersheetlight {
+    display: flex;
+    max-height: 400px;
+    max-width: 400px;
+    justify-content: center;
+  }
+  .stickersheetdark {
+    display: none;
+  }
 }
 .dark {
   main {
@@ -84,19 +87,15 @@ article {
     border-color: #8563af;
     background-color: #e6b6c9;
   }
-}
+  .stickersheetdark {
+    display: flex;
+    max-height: 400px;
+    max-width: 400px;
+  }
 
-.stickersheetdark {
-  /* display: flex; */
-  max-height: 400px;
-  max-width: 400px;
-  display: none;
-}
-
-.stickersheetlight {
-  /* display: flex; */
-  max-height: 400px;
-  max-width: 400px;
+  .stickersheetlight {
+    display: none;
+  }
 }
 
 /* } */
