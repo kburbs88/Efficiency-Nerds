@@ -8,40 +8,20 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
   integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
   <link rel="stylesheet" href="assets/CSS/style.CSS" />
-  <div>
-  <main>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class='logo'>
-      <img src="assets/images/EF.nerds.transparent.png" height=300px, display=flex, alt="Efficiency Nerds Logo" />
-    </div>
-    <link rel="stylesheet" type="text/css" href="assets/CSS/style.CSS" />
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Welcome You!</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-            <a class="nav-link" href="#">Tasks Tools</a>
-            <a class="nav-link" href="#">Pomodoro</a>
-            <p>Choose Your Profile Style</p>
-            <label display:inline-block,="500px">🦄</label>
-            <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="toggle">
-              <label class="form-check-label" for="toggle">🦖</label>
+<main>
+  <!-- logo and toggle switcher  -->
+  <header>
+  <div class='container-fluid logo'>
+    <img class="img-fluid" src="assets/images/EF.nerds.transparent.png" alt="Efficiency Nerds Logo" />
+  </div>
+    <h6>Choose Your Profile Style</h>
+            <div><label class="form-check-label" for="toggle">🦄</label></div>
+            <div class="form-check form-switch"></div>
+            <div><input class="form-check-input" type="checkbox" role="switch" id="toggle"></div>
+            <div><label class="form-check-label" for="toggle">🦖</label>
             </div>
-          </div>
-        </div>
-      </div>
-</div>
-</div>
-</nav>
+  </header>
+  <!-- full profile and tools -->
 <body class="container-fluid" style="min-height: 100vh;">
   <article class="row" id="full-profile">
     <aside class="col-sm-4 text-center" id="profile-overview">
@@ -49,57 +29,61 @@
       <button id="add-image">Add Profile Image</button>
       <ul style="list-style-type: none">
         <li>
-          <h3 id="username">username</h3>
+          <h4 class="display-5" id="username">username</h4>
         </li>
         <li id="pronouns">Pronouns</li>
         <li id="age-range">Age Range</li>
         <li id="sun-sign">Sun Sign</li>
     </aside>
-    <section class="col-sm-8">
-      <h3>About me</h3>
-      <p id="about-me">
-        This column will have the about me and sticker sheet after the about
-        me
-      </p>
-      <div class="stickersheetlight" display: none>
-        <img src="./assets/images/StickerSheet-Light.png" height=300px, alt="Light Sticker Sheet">
+    <section class="col-sm-8 content-center">
+      <!-- <div class="text-center"> -->
+      <h3 class="display-6">About me</h3>
+      <p id="about-me"></p>
+      <div>
+        <div class="stickersheetlight">
+          <img  src="./assets/images/StickerSheet-Light.png" class="img-fluid mx-auto" alt="Light Sticker Sheet">
+          </div>
+        <div class="stickersheetdark">
+          <img src="./assets/images/StickerSheet-Dark.png"class="img-fluid mx-auto" alt="Dark Sticker Sheet" />
         </div>
-      <div class="stickersheetdark">
-        <img src="./assets/images/StickerSheet-Dark.png" height=300px, alt="Dark Sticker Sheet" />
       </div>
     </section>
   </article>
+ 
   <article class="row text-center" id="fun-fact">
-    <!-- if it looks funcing wrap 58 and 59 in a div class= "col" -->
-    <h3>Nerdy Fun Fact</h3>
+    <h3 class="display-6">Nerdy Fun Fact</h3>
     <p id="nerdy-fact">Fun fact goes here</p>
   </article>
+ 
   <article class="row text-center" id="tools-bar">
-    <h3>Efficiency Nerd Tools</h3>
+    <h3 class="display-6">Efficiency Nerd Tools</h3>
   </article>
+ 
   <article class="row" id="all-tools">
     <section class="col-sm-8">
+      <h3 class="display-6">To-Do List:</h3>
       <form id="todo-form" method="POST">
         <label for="todo-text">Add a Todo</label>
         <input type="text" placeholder="I need to..." name="todo-text" id="todo-text" />
       </form>
       <ul id="todo-list"></ul>
     </section>
-    <div class="text-center">
-      <section>Generate A Random Todo</section><br>
+ 
+    <div class="col-sm-4 text-center">
+      <h3 class="display-6">Let us Pick Your Task!</h3>
+      <section></section><br>
       <button id="randomize">Randomize!</button><br>
-      <p>Your task is:</p>
+      <p></p>
       <h1 id="randomTodo"></h1>
-      <div class="random-wheel">
-      <img src="./assets/images/RandomWheel.transparent.png" height=200px, display=flex, alt="Task Generator Wheel" />
-    </div>
+      <!-- <div class="random-wheel">
+      <!-- <img class="img-fluid" src="./assets/images/RandomWheel.transparent.png" height=200px, display=flex, alt="Task Generator Wheel" /> -->
+    </div> -->
   
     <article class="timer">
       <section class="col text-center">
         <h4> Pomodoro Technique</h4>
-
         <div id="tomatotimer">
-          <img src="./assets/images/TomatoTimer.transparent.png" height=100px, alt="Tomato Timer" />
+          <img class="img-fluid" src="./assets/images/TomatoTimer.transparent.png" height=100px, alt="Tomato Timer" />
           <div id="timer">20:00 mins</div>
         </div>
         <button onclick="startTimer()">Start Timer</button>

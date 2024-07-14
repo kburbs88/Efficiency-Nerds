@@ -1,107 +1,107 @@
-/* Profile Designs */
-/* *,
-*::before,
-*::after {
-  box-sizing: content-box;
-} */
-
-main {
+/* main {
   font-family: 'Lucidia Handwriting' sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f0f0f0;
-}
-
+  /* margin: 0;
+  padding: 0; */
+/* background-color: #f0f0f0;
+} */
 article {
   border-top: solid;
   border-color: #8563af;
   /* margin-top: something px */
 }
-.light{
+.light {
   main {
     background-color: #dd98ed;
   }
-#full-profile {
-  background-color: #ffedda;
-}
-#fun-fact {
-  background-color: #b7eee7;
-}
-#fun-fact p {
-  margin-bottom: 0rem;
-}
-#tools-bar {
-  background-color: aquamarine;
-}
-#tools-bar h3 {
-  margin-bottom: 0rem;
-}
-#timer {
-  background-color: #dd98ed;
-}
-#all-tools {
-  background-color: #ffedda;
-}
-footer {
-  border-top: solid;
-  border-color: #8563af;
-  background-color: #e6b6c9;
-}
-.stickersheetlight{
-  display:flex;
-  justify-content: center;
-}
-.stickersheetdark {
-  display: none;
-}
-}
-.dark{
-main {
-    background-color: #8563af;
+  #full-profile {
+    background-color: #ffedda;
   }
-#full-profile {
-  background-color: #75ebb4;
-}
-#fun-fact {
-  background-color: #4296bd;
-}
-#fun-fact p {
-  margin-bottom: 0rem;
-}
-#tools-bar {
-  background-color: #d629b6;
-}
-#tools-bar h3 {
-  margin-bottom: 0rem;
-}
-#timer {
-  background-color: #fae932;
-}
-#tomatotimer {
-  background-color: #fae932;
-} 
-#all-tools {
-  background-color: #75ebb4;
-}
-footer {
-  border-top: solid;
-  border-color: #8563af;
-  background-color: #e6b6c9;
-}
-.stickersheetdark{
+  #fun-fact {
+    background-color: #b7eee7;
+  }
+  #fun-fact p {
+    margin-bottom: 0rem;
+  }
+  #tools-bar {
+    background-color: aquamarine;
+  }
+  #tools-bar h3 {
+    margin-bottom: 0rem;
+  }
+  #timer {
+    background-color: #dd98ed;
+  }
+  #all-tools {
+    background-color: #ffedda;
+  }
+  footer {
+    border-top: solid;
+    border-color: #8563af;
+    background-color: #e6b6c9;
+  }
+  /* .stickersheetlight{
   display:flex;
   justify-content: center;
-}
-.stickersheetlight {
+} */
+  /* .stickersheetdark {
   display: none;
+} */
 }
+.dark {
+  main {
+    background-color: white;
+  }
+  #full-profile {
+    background-color: white;
+  }
+  #fun-fact {
+    background-color: #e6b6c9;
+  }
+  #fun-fact p {
+    margin-bottom: 0rem;
+  }
+  #tools-bar {
+    background-color: #d629b6;
+  }
+  #tools-bar h3 {
+    margin-bottom: 0rem;
+  }
+  #timer {
+    background-color: #fae932;
+  }
+  #tomatotimer {
+    background-color: #fae932;
+  }
+  #all-tools {
+    background-color: #75ebb4;
+  }
+  footer {
+    border-top: solid;
+    border-color: #8563af;
+    background-color: #e6b6c9;
+  }
 }
 
-.footer {
+.stickersheetdark {
+  /* display: flex; */
+  max-height: 400px;
+  max-width: 400px;
+  display: none;
+}
+
+.stickersheetlight {
+  /* display: flex; */
+  max-height: 400px;
+  max-width: 400px;
+}
+
+/* } */
+
+/* .footer {
   show();
   display: flex;
   align-content: center;
-}
+} */
 
 button {
   padding: 12px 70px;
@@ -113,48 +113,48 @@ button {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .randomizer {
-  display:flex;
+  display: flex;
   justify-content: end;
   margin: 40px;
 }
 
 .logo {
   margin-top: 10px;
-  display:flex;
+  display: flex;
   justify-content: center;
+  max-height: 150px;
+  max-width: 150px;
 }
 
-.tomatoimage {
+/* .tomatoimage {
   display:flex;
   justify-content: center;
-}
+} */
 
 .random-wheel {
-  display:flex;
+  display: flex;
   justify-content: end;
   padding-right: 150px;
-  margin-top: 0%
- margin-bottom: 0px;
+  margin-top: 0%;
+  /* margin-bottom: 0px; */
 }
 
 #toggle {
-    padding: 10px 20px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    cursor: pointer;
-  }
- 
-  #toggle.active {
-    background-color: #007bff;
-    color: white;
-  }
-   
- #toggle {
-    transition: background-color 0.3s ease;
-  }
-  
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
 
+#toggle.active {
+  background-color: #007bff;
+  color: white;
+}
+
+#toggle {
+  transition: background-color 0.3s ease;
+}
