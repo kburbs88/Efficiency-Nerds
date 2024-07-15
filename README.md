@@ -9,27 +9,24 @@ Provide a short description explaining the what, why, and how of your project. U
 - What problem does it solve?
 - What did you learn?
 
-## Table of Contents (Optional)
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
-
 ## Installation
 
 What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
 
 ## Usage
-
-Provide instructions and examples for use. Include screenshots as needed.
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
+-On Landing Page, fill out all requested account information. 
+-When information is entered, click "Create Account" button.
+-When Create Account Button is clicked, you will be redirected to Profile Page. 
+-From the profile page, you can add a Profile Image, and you will see your informatoin you entered from the Landing Page.
+-In the Efficiency Nerd Tools Section, you have a ToDo List that will generate Tasks you write in the box.
+-After you enter your tools, you can generate a Random Task to Work on. 
+-When you have completed a task, you click "Done" button next to your completed task and the task will be removed from your list. ```md
+    ![alt text](assets/images/EF-TodoExample.png)
+    ```
+-At the bottom of the page, you can set a 20 minute timer to work on your tasks. 
+-If you complete the task before your timer runs out, click "Stop Timer" and there is a Modal that pops up with an affirmation that you finished your task!
+   ```md
+    ![alt text](assets/images/EF-TimerExample.png)
     ```
 
 ## Credits
@@ -38,8 +35,7 @@ Dafne Luna - https://github.com/dafnefluna
 Molly Howard - https://github.com/mollyhoward319
 Usama Badarr - https://github.com/usamabadarr
 
-Bootstrap
-FSF?
+Bootstrap - getbootstrap.com
 W3 Schools - https://www.w3schools.com/
 
 ## License
@@ -59,11 +55,3 @@ Badges aren't necessary, per se, but they demonstrate street cred. Badges let ot
 ## Features
 
 If your project has a lot of features, list them here.
-
-## How to Contribute
-
-If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
-
-## Tests
-
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
