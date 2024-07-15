@@ -9,7 +9,33 @@ Throughout the process, we honed in a lot of our javascript and CSS/Bootstrap sk
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+Follow these steps to set up and run the “Efficiency Nerds” app locally on your machine.
+Prerequisites
+
+Before you begin, ensure you have the following installed:
+A modern web browser (e.g., Chrome, Firefox, Edge)
+
+Clone the Repository
+Clone the repository from GitHub to your local machine using the following command:
+
+bash
+git clone https://github.com/yourusername/efficiency-nerds.git
+
+Navigate to the Project Directory
+Change your current directory to the project directory:
+
+bash
+cd efficiency-nerds
+
+Run the App
+Open the index.html file in your web browser. You can do this by double-clicking the file or by running the following command in your terminal:
+
+bash
+open index.html - (For macOS) OR right click to open in a default browser
+start index.html - (For Windows) OR right click to open in a default browser
+
+The app will open in your default web browser and be ready to use.
+
 
 ## Usage
 -On Landing Page, fill out all requested account information. 
@@ -38,11 +64,27 @@ W3 Schools - https://www.w3schools.com/
 
 ## License
 
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
+This project is currently not licensed. All rights to the “Efficiency Nerds” app are reserved by the original authors.
 
----
+Future Considerations
 
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
+In the future, we may consider adding an open-source license to facilitate collaboration and contributions from the community. Possible licenses we are considering include the MIT License, Apache License 2.0, and/or GNU General Public License v3.0.
+
+If you have any questions or suggestions regarding the licensing of this project, please feel free to reach out.
+
+Choosing a License in the Future
+If we decide to add a license in the future, here are some common open-source licenses we might consider:
+
+MIT License: Permissive and simple, allowing almost unrestricted use of your code.
+Apache License 2.0: Similar to MIT but provides an explicit grant of patent rights from contributors to users.
+GNU General Public License v3.0 (GPL-3.0): Strong copyleft license that requires derived works to be open-sourced under the same license.
+
+Adding a License
+When we decide to add a license, we will create a “LICENSE” file in the repository’s root directory with the full text of the chosen license.
+Example License Section with Apache License 2.0 License
+
+License
+This project will be licensed under the Apache License 2.0 License. See the LICENSE file for details.
 
 
 ## Features
