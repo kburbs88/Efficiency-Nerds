@@ -67,9 +67,14 @@ label {
   main {
     background-color: #8563af;
   }
-
+#timer {
+  background-color: #d629b6;
+}
+#tomatotimer {
+  background-color: #32fab7;
+}
   #full-profile {
-    background-color: black;
+    background-color: #0d95f0;
     color: white;
   }
   #fun-fact {
@@ -158,6 +163,9 @@ footer {
   padding-top: 10px;
   padding-bottom: 10px;
   font-weight: bold;
+  border-top: solid;
+  border-color: #8563af;
+  background-color: #e6b6c9;
 }
 
 .filler-pic {
