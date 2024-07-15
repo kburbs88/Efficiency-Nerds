@@ -20,6 +20,7 @@ article {
 .light{
   main {
     background-color: #dd98ed;
+    text-color: white;
   }
 #full-profile {
   background-color: #ffedda;
@@ -60,10 +61,10 @@ main {
     background-color: #8563af;
   }
 #full-profile {
-  background-color: #75ebb4;
+  background-color: black;
 }
 #fun-fact {
-  background-color: #4296bd;
+  background-color: #75ebb4;
 }
 #fun-fact p {
   margin-bottom: 0rem;
@@ -81,7 +82,7 @@ main {
   background-color: #fae932;
 } 
 #all-tools {
-  background-color: #75ebb4;
+  background-color: black;
 }
 footer {
   border-top: solid;
