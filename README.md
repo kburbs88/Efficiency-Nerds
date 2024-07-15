@@ -2,12 +2,10 @@
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+Our group was interested in creating an app that helped users accomplish or meet a personalized goal for each user. Our ideas varied so we combined most of them into Effeciency Nerds. Efficiency Nerds is a productivity social media app that allows users to create their profile, a la MySpace, and access the built-in productivity tools to be effective and efficient. We want people to connect with others to build community and meet their goals together. We are only at the profile development stage and plan to further develop additional features and connectivity opportunities. 
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+Throughout the process, we honed in a lot of our javascript and CSS/Bootstrap skills primarily how to effectively use GitHub and work as a team. We learned about what it’s like working with code for extended periods and the strong need to figure out the broken code.
+
 
 ## Installation
 
@@ -46,12 +44,15 @@ The last section of a high-quality README file is the license. This lets other d
 
 🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
 
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-
-Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
 
 ## Features
 
-If your project has a lot of features, list them here.
+After a Nerd user registers or logs in, they will be redirected to the homepage where they will see a profile overview and different productivity features. 
+
+The profile features the ability to upload and change your picture as many times as you like. You will also see a sticker sheet, which is a collection of sticker awards for completing tasks and meeting your goals. At the moment this feature does not work but is under development.
+
+The heart of Efficiency Nerds is the Efficiency Nerd Tools. At the moment users can create their to-do lists by simply adding to our To-Do List form. For users who may struggle with executive dysfunction issues, we created a task randomizer that will draw from the existing to-do list and pick a task for you to do.
+
+The last feature is the Pomodoro Timer. The Pomodoro Method is a task timing technique that gives you 20 minutes to work uninterrupted with a 5-minute break, and users can repeat that cycle as many times as needed. Our timer will run for 20 minutes, but we understand some people have complicated lives so they can stop the timer. Once the timer is stopped Nerds will be shown a congratulatory message. 
+
+In future development, we hope to track the frequency of the Pomodoro cycle, and the number of tasks completed, to establish the sticker reward system.
