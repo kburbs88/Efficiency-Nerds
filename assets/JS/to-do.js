@@ -9,6 +9,7 @@ const themeSwitcher = document.querySelector("#toggle");
 const body = document.querySelector("body");
 
 let mode = "light";
+body.setAttribute("class", "container-fluid light");
 
 themeSwitcher.addEventListener("click", function (event) {
   console.log(event);
@@ -24,7 +25,6 @@ themeSwitcher.addEventListener("click", function (event) {
 // To do List
 const todos = [];
 console.log(todos);
-
 function renderTodos() {
   todoList.innerHTML = "";
   const storeTodos = JSON.parse(localStorage.getItem("todos"));
@@ -131,38 +131,38 @@ document.getElementById("stickersheet").style.display = "hidden";
 // }
 // // **Still working on the add image function**
 
-// let tempStorageObject = {
-//   images: [],
-// };
-// function updateLocalStorage() {
-//   localStorage.setItem("profileImg", JSON.stringify(tempStorageObject));
-// }
+let tempStorageObject = {
+  images: [],
+};
+function updateLocalStorage() {
+  localStorage.setItem("profileImg", JSON.stringify(tempStorageObject));
+}
 
-// function loadFromLocalStorage() {
-//   const storedData = JSON.parse(localStorage.getItem("profileImg"));
-//   if (storedData) {
-//     tempStorageObject = storedData;
-//   }
-// }
+function loadFromLocalStorage() {
+  const storedData = JSON.parse(localStorage.getItem("profileImg"));
+  if (storedData) {
+    tempStorageObject = storedData;
+  }
+}
 
-// tempStorageObject.images.forEach((image) => {
-//   const img = document.createElement("img");
-//   img.src = image.url;
-//   img.style.left = image.left;
-//   img.style.top = image.top;
-//   document.body.append(img);
-// });
-// addImageBtn.addEventListener("click", function () {
-//   const imageUrl = imageUrlInput.value;
-//   if (imageUrl) {
-//     const img = document.createElement("img");
-//     img.src = imageUrl;
-//     document.body.appendC(img);
-//   }
-// });
-// currentElement = img;
+tempStorageObject.images.forEach((image) => {
+  const img = document.createElement("img");
+  img.src = image.url;
+  img.style.left = image.left;
+  img.style.top = image.top;
+  document.body.appendChild(img);
+});
+addImageBtn.addEventListener("click", function () {
+  const imageUrl = imageUrlInput.value;
+  if (imageUrl) {
+    const img = document.createElement("img");
+    img.src = imageUrl;
+    document.body.appendChild(img);
+  }
+});
+currentElement = img;
 
-// body.append(currentElement);
+body.appendChild(currentElement);
 
-// // Update local storage with the new tempStorageObject information
-// updateLocalStorage();
+// Update local storage with the new tempStorageObject information
+updateLocalStorage();

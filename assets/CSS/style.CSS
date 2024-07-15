@@ -17,6 +17,7 @@ article {
 .light {
   main {
     background-color: #dd98ed;
+    text-color: white;
   }
   #full-profile {
     background-color: #ffedda;
@@ -59,10 +60,10 @@ article {
     background-color: white;
   }
   #full-profile {
-    background-color: white;
+    background-color: black;
   }
   #fun-fact {
-    background-color: #e6b6c9;
+    background-color: #75ebb4;
   }
   #fun-fact p {
     margin-bottom: 0rem;
@@ -80,7 +81,7 @@ article {
     background-color: #fae932;
   }
   #all-tools {
-    background-color: #75ebb4;
+    background-color: black;
   }
   footer {
     border-top: solid;
@@ -89,10 +90,8 @@ article {
   }
   .stickersheetdark {
     display: flex;
-    max-height: 400px;
-    max-width: 400px;
+    justify-content: center;
   }
-
   .stickersheetlight {
     display: none;
   }

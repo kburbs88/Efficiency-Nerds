@@ -8,17 +8,34 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
   integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
   <link rel="stylesheet" href="assets/CSS/style.CSS" />
-<main>
-  <!-- logo and toggle switcher  -->
-  <header>
-  <div class='container-fluid logo'>
-    <img class="img-fluid" src="assets/images/EF.nerds.transparent.png" alt="Efficiency Nerds Logo" />
-  </div>
-    <h6>Choose Your Profile Style</h>
-            <div><label class="form-check-label" for="toggle">🦄</label></div>
-            <div class="form-check form-switch"></div>
-            <div><input class="form-check-input" type="checkbox" role="switch" id="toggle"></div>
-            <div><label class="form-check-label" for="toggle">🦖</label>
+  <div>
+  <main>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class='logo'>
+      <img src="assets/images/EF.nerds.transparent.png" height=300px, display=flex, alt="Efficiency Nerds Logo" />
+    </div>
+    <link rel="stylesheet" type="text/css" href="assets/CSS/style.CSS" />
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Welcome You!</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" href="#">Tasks Tools</a>
+            <a class="nav-link" href="#">Pomodoro</a>
+            <p>Choose Your Profile Style</p>
+            
+            <label display:inline-block,="500px">🦄</label>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="toggle">
+              <label class="form-check-label" for="toggle">🦖</label>
             </div>
   </header>
   <!-- full profile and tools -->
@@ -36,17 +53,14 @@
         <li id="sun-sign">Sun Sign</li>
     </aside>
     <section class="col-sm-8 content-center" id="right-profile">
-      <!-- <div class="text-center"> -->
       <h3 class="display-6">About me</h3>
-      <p id="about-me"></p>
-      <div>
-        <div class="stickersheetlight">
-          <img src="./assets/images/StickerSheet-Light.png"  class="img-fluid mx-auto" alt="Light Sticker Sheet">
-          </div>
-        <div class="stickersheetdark">
-          <img src="./assets/images/StickerSheet-Dark.png" class="img-fluid mx-auto" alt="Dark Sticker Sheet">
-          <script> function hideImage() { document.getElementById('myImage').style.display = 'none'; } </script>
-        </div>
+      <p id="about-me">
+      </p>
+      <div class="stickersheetlight" display: none>
+        <img src="./assets/images/StickerSheet-Light.png" height=300px, class="img-fluid" alt="Light Sticker Sheet">
+      </div>
+      <div class="stickersheetdark">
+        <img src="./assets/images/StickerSheet-Dark.png" height=300px, class="img-fluid" alt="Dark Sticker Sheet" />
       </div>
     </section>
   </article>
@@ -76,9 +90,7 @@
       <button id="randomize">Randomize!</button><br>
       <p></p>
       <h1 id="randomTodo"></h1>
-      <!-- <div class="random-wheel">
-      <!-- <img class="img-fluid" src="./assets/images/RandomWheel.transparent.png" height=200px, display=flex, alt="Task Generator Wheel" /> -->
-    </div> -->
+    </div> 
   
     <article class="timer">
       <section class="col text-center">
