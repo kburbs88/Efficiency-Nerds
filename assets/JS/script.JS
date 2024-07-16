@@ -1,8 +1,26 @@
+function SignIn() {
+  const username = document.getElementById('signInUsername').value;
+  const password = document.getElementById('signInPassword').value;
+
+  const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+
+  if (currentUser) {
+    if (username === currentUser.username && password === currentUser.password) {
+      window.location.href = 'profilet-test.html'; // Redirect to the profile page
+    } else {
+      document.getElementById('signinMessage').innerText = 'Invalid username or password';
+    }
+  } else {
+    document.getElementById('signinMessage').innerText = 'No user found. Please sign up first.';
+  }
+}
+
 function SignUp() {
   const firstName = document.getElementById("firstName").value;
   const lastName = document.getElementById("lastName").value;
   const username = document.getElementById("username").value;
   const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value; // Added missing password field
   const ageRange = document.getElementById("ageRange").value;
   const sunSign = document.getElementById("sunSign").value;
   const pronouns = document.getElementById("pronouns").value;
@@ -30,6 +48,7 @@ function SignUp() {
     lastName,
     username,
     email,
+    password, // Added password in the user object
     ageRange,
     sunSign,
     pronouns,
