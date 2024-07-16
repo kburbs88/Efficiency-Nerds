@@ -132,10 +132,15 @@ button {
   margin: 40px;
 }
 
-.logo {
+.profilelogo {
   display: flex;
   justify-content: center;
   background-color: #8563af;
+}
+
+.landinglogo {
+  display: flex;
+  justify-content: center;
 }
 
 .tomatoimage {
