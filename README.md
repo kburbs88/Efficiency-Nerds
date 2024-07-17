@@ -2,7 +2,7 @@
 
 ## Description
 
-Our group was interested in creating an app that helped users accomplish or meet a personalized goal for each user. Our ideas varied so we combined most of them into Effeciency Nerds. Efficiency Nerds is a productivity social media app that allows users to create their profile, a la MySpace, and access the built-in productivity tools to be effective and efficient. We want people to connect with others to build community and meet their goals together. We are only at the profile development stage and plan to further develop additional features and connectivity opportunities. 
+Our group was interested in creating an app that helped users accomplish or meet a personalized goal for each user. Our ideas varied so we combined most of them into Effeciency Nerds. Efficiency Nerds is a productivity social media app that allows users to create their profile, a la MySpace, and access the built-in productivity tools to be effective and efficient. We want people to connect with others to build community and meet their goals together. We are only at the profile development stage and plan to further develop additional features and connectivity opportunities.
 
 Throughout the process, we honed in a lot of our javascript and CSS/Bootstrap skills primarily how to effectively use GitHub and work as a team. We learned about what it’s like working with code for extended periods and the strong need to figure out the broken code.
 
